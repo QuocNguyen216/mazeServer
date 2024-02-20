@@ -8,9 +8,7 @@ const mongoRoute = require("./routes/mongo");
   Please change the server port as needed if your react server run on a different port.
   The provided code will default the server to the port 3000 in react
 */ 
-app.use(cors({
-    origin: 'http://localhost:3000' 
-  }));
+app.use(cors());
 
 //This is a middleware that parse our request body, ensuring that we are receiving a JSON object
 app.use(express.json());
