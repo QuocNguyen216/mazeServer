@@ -23,7 +23,7 @@ router.post("/connect",async (req,res) =>{
   let login = true;
   const receivedData = req.body;
   console.log("Username: "+receivedData.username+" + "+receivedData.password);
-  let uri = "mongodb+srv://" + receivedData.username + ":" + receivedData.password + "@mazestorage.g81b7ci.mongodb.net/?retryWrites=true&w=majority";
+  let uri = "mongodb+srv://" + receivedData.username + ":" + receivedData.password + "@mazestorage.g81b7ci.mongodb.net/?retryWrites=true&w=majority&appName=MazeStorage";
   // Create a MongoClient with a MongoClientOptions object to set the Stable API version
   const clientLogon = new MongoClient(uri, {
     serverApi: {
